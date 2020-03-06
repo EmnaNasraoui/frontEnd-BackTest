@@ -1,0 +1,96 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal" routerLink='/home' style="cursor: pointer;">Home</h5>
+
+  <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
+  <!-- <a class="btn btn-outline-primary" routerLink='/addQCM'>add QCM</a> -->
+</div>
+<div class="container">
+  <h2>QCM</h2>
+  <form [formGroup]="qcmForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Question</label>
+      <input type="text" class="form-control" formControlName="title" id="exampleInputEmail1"
+        aria-describedby="emailHelp" placeholder="Type question here...">
+    </div>
+    <div class="form-group">
+      <form>
+        <label for="exampleInputEmail1">Choice 1</label>
+        <input type="text" class="form-control" [formControl]="text1" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="Type answer here...">
+
+        <div class="form-check">
+          <input class="form-check-input" [formControl]="value1" type="radio" name="gridRadios1" id="gridRadios1"
+            value="right">
+          <label class="form-check-label" for="gridRadios1">
+            right
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" [formControl]="value1" type="radio" name="gridRadios1" id="gridRadios2"
+            value="wrong">
+          <label class="form-check-label" for="gridRadios2">
+            wrong
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="form-group">
+      <form>
+        <label for="exampleInputEmail1">Choice 2</label>
+        <input type="text" class="form-control"  [formControl]="text2" id="exampleInputEmail2"
+          aria-describedby="emailHelp" placeholder="Type answer here...">
+        <div class="form-check">
+          <input class="form-check-input"  [formControl]="value2" type="radio" name="gridRadios2" id="gridRadios3" value="right">
+          <label class="form-check-label" for="gridRadios3">
+            right
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input"  [formControl]="value2" type="radio" name="gridRadios2" id="gridRadios4" value="wrong">
+          <label class="form-check-label" for="gridRadios4">
+            wrong
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="form-group">
+      <form>
+        <label for="exampleInputEmail1">Choice 3</label>
+        <input type="text" class="form-control"  [formControl]="text3" id="exampleInputEmail3"
+          aria-describedby="emailHelp" placeholder="Type answer here...">
+        <div class="form-check">
+          <input class="form-check-input" [formControl]="value3" type="radio" name="gridRadios3" id="gridRadios5" value="right">
+          <label class="form-check-label" for="gridRadios5">
+            right
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" [formControl]="value3" type="radio" name="gridRadios3" id="gridRadios6" value="wrong">
+          <label class="form-check-label" for="gridRadios6">
+            wrong
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="form-group">
+      <form>
+        <label for="exampleInputEmail1">Choice 4</label>
+        <input type="text" class="form-control" [formControl]="text4" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="Type answer here...">
+        <div class="form-check">
+          <input class="form-check-input" [formControl]="value4" type="radio" name="gridRadios4" id="gridRadios7" value="right">
+          <label class="form-check-label" for="gridRadios7">
+            right
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" [formControl]="value4"type="radio" name="gridRadios4" id="gridRadios8" value="wrong">
+          <label class="form-check-label" for="gridRadios8">
+            wrong
+          </label>
+        </div>
+      </form>
+    </div>
+    <button type="button" (click)="addQCMs()" class="btn btn-primary">Save</button>
+  </form>
+</div>
